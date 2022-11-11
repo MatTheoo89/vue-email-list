@@ -33,16 +33,9 @@ createApp({
     mounted(){
         //console.log('montata');
         // ! richiamo X10 volte la funzione e genera 10 mail random
-        this.getApi();
-        this.getApi();
-        this.getApi();
-        this.getApi();
-        this.getApi();
-        this.getApi();
-        this.getApi();
-        this.getApi();
-        this.getApi();
-        this.getApi();
+        for (let i = 0; i <= 10; i++) {
+            this.getApi()
+            }
         //console.log(this.mails);
     },
     created(){
