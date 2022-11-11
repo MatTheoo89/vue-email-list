@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Vue Email List</title>
+</head>
+<body>
+    
+    <div class="main-wrapper" id="app">
+        
+        <h1>{{title}}</h1>
+        <ul v-if="isLoad">
+            <li v-for="mail in mails">{{mail}}</li>
+        </ul>
+    
+        <div class="loader" v-else>
+            <span class="loader"></span>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
