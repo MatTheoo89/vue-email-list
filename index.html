@@ -12,12 +12,19 @@
 <body>
     
     <div class="main-wrapper" id="app">
-        
+
+        <!-- ? mi riporto il data title -->
         <h1>{{title}}</h1>
+
+        <!-- ? condizione vera per cui compare il load fino ai risultati -->
         <ul v-if="isLoad">
+
+            <!-- ? ciclo array mail del risultato -->
             <li v-for="mail in mails">{{mail}}</li>
+
         </ul>
-    
+
+        <!-- ? spazio del load + condizione ELSE che scompare ai risultati generati -->
         <div class="loader" v-else>
             <span class="loader"></span>
         </div>
