@@ -9,20 +9,21 @@ createApp({
         return{
             title: 'Vue Email List',
             apiUrl: 'https://flynn.boolean.careers/exercises/api/random/mail',
-            mails: [],
-            isLoad: false,
+            mails: [], // !creao array contenitore
+            isLoad: false, // !per il loader
         }
     },
     methods:{
-        
+        // ! creo funzione
         getApi(){
-            
+            // * reset loader
             this.isLoad = false;
-            
+            // * gli dichiaro l'API da usare
             axios.get(this.apiUrl)
-            
+            // ? non so come definirla (ARROW FX?)
             .then( result => {
                 //console.log(result.data);
+                // ! pusho il risultato nell'array contenitore
                 this.mails.push(result.data.response);
                 
                 this.isLoad = true;
@@ -31,6 +32,7 @@ createApp({
         },
     mounted(){
         //console.log('montata');
+        // ! richiamo X10 volte la funzione e genera 10 mail random
         this.getApi();
         this.getApi();
         this.getApi();
@@ -41,7 +43,7 @@ createApp({
         this.getApi();
         this.getApi();
         this.getApi();
-        console.log(this.mails);
+        //console.log(this.mails);
     },
     created(){
         //console.log('creata');
